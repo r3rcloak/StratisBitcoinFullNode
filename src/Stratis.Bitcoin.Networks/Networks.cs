@@ -19,5 +19,13 @@ namespace Stratis.Bitcoin.Networks
                 return new NetworksSelector(() => new StratisMain(), () => new StratisTest(), () => new StratisRegTest());
             }
         }
+
+        public static NetworksSelector Cloak
+        {
+            get
+            {
+                return new NetworksSelector(() => new CloakMain(), () => new CloakTest(), () => new CloakRegTest());
+            }
+        }
     }
 }
